@@ -3,14 +3,22 @@ pipeline{
 	stages{
 		stage('Checkout'){
 			steps{
-				echo 'Hello Checkout'
+				git branch: "main", url: 'https://github.com/jasdhiratrevature/StudentDemo.git'
+			
 			}
 			
 		}
 		
 		stage('Build'){
 			steps{
-			echo 'Hello Build'
+				sh 'a+x mvnw'
+				sh './mvnw clean package -DskipTests=true' 
+			}
+			
+			post{
+				always{
+					archiveArtifacts 'target/*.jar'
+				}
 			}
 		}
 		
