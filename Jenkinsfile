@@ -22,6 +22,12 @@ pipeline{
 			}
 		}
 		
+		stage(DockerBuild){
+			steps{
+				sh 'docker build -t jasdhir/student-demo:latest .'
+			}
+		}
+		
 	}
 
 }
