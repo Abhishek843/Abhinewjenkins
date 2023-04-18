@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('Checkout'){
 			steps{
-				git branch: "main", url: 'https://github.com/jasdhiratrevature/StudentDemo.git'
+				git branch: "main", url: 'https://github.com/Abhishek843/Abhinewjenkins.git'
 			
 			}
 			
@@ -24,7 +24,7 @@ pipeline{
 		
 		stage(DockerBuild){
 			steps{
-				sh 'docker build -t jasdhir/student-demo:latest .'
+				sh 'docker build -t Abhishek843/Abhinewjenkins:latest .'
 			}
 		}
 		
