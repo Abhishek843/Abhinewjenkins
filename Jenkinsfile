@@ -29,6 +29,11 @@ pipeline{
                                 sh 'docker push abhishek843/abhinewjenkins:latest'
 			}
 		}
+		stage('Login') {
+		     steps {
+                                sh 'echo Abhi@2798 | docker login -u achoure184@gmail.com --password-stdin'
+                     }
+                }
 		
 	}
 
