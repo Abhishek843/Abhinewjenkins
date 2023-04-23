@@ -31,7 +31,7 @@ pipeline{
 		}
 		stage('Login') {
 		     steps {
-                                sh 'echo Abhi@2798 | docker login -u achoure184@gmail.com --password-stdin'
+                                sh 'echo Abhi@2798 | docker login -u achoure184@gmail.com --password Abhi@2798'
                      }
                 }
 		
