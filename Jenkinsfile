@@ -25,7 +25,7 @@ pipeline{
 		stage(DockerBuild){
 			steps{
 				sh 'docker build -t abhishek843/abhinewjenkins:latest .'
-				sh 'docker login -u achoure184@gmail.com -p Abhi@2798'
+				sh 'docker login -u achoure184@gmail.com --password-stdin Abhi@2798'
                                 sh 'docker push abhishek843/abhinewjenkins:latest'
 			}
 		}
