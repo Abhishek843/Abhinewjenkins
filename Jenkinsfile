@@ -29,10 +29,36 @@ pipeline{
 			}
 		}
 		stage('Login') {
-		     steps {
-                                sh 'echo Abhi@2798 | docker login -u achoure184@gmail.com --password Abhi@2798'
-                     }
+
+                      steps {
+
+                              sh 'echo Abhi@2798 | docker login -u leviak2798 --password-stdin'
+
+                      }
+
                 }
+
+             stage('Push') {
+
+                    steps {
+
+                            sh 'docker push abhishek843/abhinewjenkins'
+
+                    }
+
+              }
+
+                }
+
+                  post {
+
+                  always {
+
+                      sh 'docker logout'
+
+                }
+
+          }
 		
 	}
 
