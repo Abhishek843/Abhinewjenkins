@@ -24,7 +24,7 @@ pipeline{
 		
 		stage(DockerBuild){
 			steps{
-				sh 'docker build -t abhishek843/abhinewjenkins:latest .'
+				sh 'docker build -t leviak2798/abhinewjenkins:latest .'
 				
 			}
 		}
@@ -42,7 +42,7 @@ pipeline{
 
                     steps {
 
-                            sh 'docker push abhishek843/abhinewjenkins'
+                            sh 'docker push leviak2798/abhinewjenkins'
 
                     }
 
